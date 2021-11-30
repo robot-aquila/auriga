@@ -9,21 +9,27 @@ import javax.persistence.Id;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
-
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.NonNull;
 
 @Entity
 @Getter
+@NoArgsConstructor
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
 public class Currency {
     
     @Id
     @GeneratedValue
     private Long id;
     
+    @NonNull
     private String code;
     
     @Enumerated(EnumType.ORDINAL)
+    @NonNull
     private CurrencyType type;
     
 }

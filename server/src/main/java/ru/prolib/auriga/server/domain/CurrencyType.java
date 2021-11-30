@@ -1,5 +1,6 @@
 package ru.prolib.auriga.server.domain;
 
 public enum CurrencyType {
-    FIAT_MONEY
+    FIAT_MONEY,
+    CRYPTOCURENCY
 }
